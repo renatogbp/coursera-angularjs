@@ -7,8 +7,8 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    <script src="angular.min.js"</script>
-    <script src="app.js"</script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
 <body ng-app="LunchCheck">
    <div class="container" ng-controller="LunchCheckController">
@@ -16,13 +16,13 @@
 
          <div class="form-group">
              <input id="lunch-menu" type="text"
-             ng-model="food"
+             ng-model="foods"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
          <div class="form-group">
              <button class="btn btn-default"
-             ng-keyup="displayMessage();">Check If Too Much</button>
+             ng-click="displayMessage();">Check If Too Much</button>
          </div>
          <div class="form-group message">
            {{messageOutput}}
