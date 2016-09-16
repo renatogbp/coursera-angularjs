@@ -11,8 +11,11 @@
     $scope.foods = "";
     $scope.messageOutput = "";
 
+
     $scope.displayMessage = function () {
       if($scope.foods){
+        $scope.color = "color:green";
+        $scope.borderColor = "border-color:green";
         var separator = ",";
         var arrayOfStrings = $scope.foods.split(separator);
         var count = 0;
@@ -28,6 +31,8 @@
         }
       }
       else {
+        $scope.color = "color:red";
+        $scope.borderColor = "border-color:red";
         $scope.messageOutput = "Please enter data first";
       }
     };
